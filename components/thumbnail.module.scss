@@ -1,0 +1,46 @@
+.thumbnailContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // background-color: rgba(255, 255, 255, 0.15);
+    // backdrop-filter: blur(5px);
+    border-radius: 3px;
+    padding: 1rem;
+    gap: 2rem;
+    max-width: 75%;
+}
+
+.thumbnailText {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+}
+.thumbnailImage {
+    flex: 1 1 0;
+}
+
+.titleLink {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #0070f3;
+    text-decoration: none;
+    &::after {
+        content: "\276D";
+    }
+    &::before {
+        content: "\276C";
+    }
+    &::after,
+    &::before {
+        color: transparent;
+        transition: all 1s ease-in-out;
+    }
+    &:hover {
+        &::after,
+        &::before {
+            color: #0070f3;
+        }
+    }
+}
